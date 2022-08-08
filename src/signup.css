@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Montserrat&family=Poppins&family=Roboto&family=Spline+Sans+Mono&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+.main_div{
+ background-color: white;
+width: 100%;
+margin: auto;
+height: 500px;
+font-family: 'Montserrat', sans-serif;
+
+}
+
+.signup_heading{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.center_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left_part{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.left_part form{
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    margin: 25px 10px;
+    padding: 20px 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* .left_part form div{
+    margin-top: 20px;
+} */
+
+.names{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+
+}
+
+
+.left_part input{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.input_fields{
+    padding: 5px;
+}
+
+.input_fields input{
+    padding: 10px;
+    margin:10px 0;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    width:100%;
+
+}
+
+.input_fields input ::placeholder{
+    font-weight: bold;
+}
+
+.input_fields label{
+  font-weight: bold;
+  margin: 8px 0px;
+}
+
+.input_material_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_material_icon input{
+    margin-left: 10px;
+}
+
+/* Checkbox */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: lighter;
+    color: gray;
+    font-size: 15px;
+  }
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* Button */
+
+.btn{
+    background-color: #2196F3;
+    font-weight: bold;
+    font-size: medium;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: #00008B;
+    color:white
+}
+
+/* Right_Part */
+.right_part{
+    margin-top: -117px;
+}
+
+.signup_image img{
+   width: 350px;
+   height: 350px;
+}
+
+.facebook_signup{
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #2196F3;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.goggle_signup{
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #CC3232;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.facebook_signup:hover{
+    background-color:#00008B;
+    color: white;
+}
+
+.facebook_signup span{
+    margin: 0px 15px;
+    font-weight: bold;
+}
+
+.goggle_signup:hover{
+    background-color:#DC6F6F;
+    color: white;
+}
+
+.goggle_signup span{
+    margin: 0px 23px;
+    font-weight: bold;
+}
+
+/* Responsive Media Query */
+
+@media only screen and (max-width: 600px){
+   .center_div{
+     width: 100%;
+     text-align: center;
+     overflow-x: hidden;
+     margin-top: -100px;
+   }
+   .right_part{
+     margin-top: 300px;
+   }
+
+   .btn{
+    cursor: pointer;
+
+   }
+   .facebook_signup{
+    width: fit-content;
+   }
+
+   .goggle_signup{
+    width: fit-content;
+   }
+
+   .signup_image{
+   visibility: hidden;
+   }
+
+   .left_part{
+     max-width: 12%;
+     font-size: 10px;
+     margin-left: 15px;
+    }
+   .left_part form{
+     width: 350px;
+     margin-left: 15px;
+    }
+   .left_part input{
+     width: 190px;
+     background-color: white;
+    }
+    .input_fields label{
+        margin-left: -111px;
+    }
+
+    #confirm{
+        margin-left: 17px;
+    }
+
+    .container{
+       width:300px;
+       font-size: 10px;
+    }
+    .checkmark{
+        margin-left: 23px ;
+        width: 10px;
+        height: 10px;
+    }
+}
